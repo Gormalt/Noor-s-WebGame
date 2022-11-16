@@ -1,5 +1,35 @@
-Hello
+Testing Page
 
-Test Test
 
-------------------------------
+<canvas id="myCanvas" width="1000" height="500" style="border:1px solid #000000;">
+</canvas>
+
+
+<script>
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+var xPos = 0;
+var yPos = 0;
+
+
+setInterval(function(){
+	
+	xPos = xPos + 1;
+	
+	ctx.fillStyle = "white";
+	ctx.fillRect(0, 0, 1000, 500);
+	
+	ctx.stroke();
+	
+	ctx.fillStyle = "black";
+	ctx.moveTo(xPos, 0);
+	ctx.lineTo(xPos, 100);
+	
+	ctx.stroke();
+	
+	}
+, 300);
+
+</script>
